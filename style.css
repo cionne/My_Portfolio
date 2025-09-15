@@ -1,0 +1,571 @@
+        /* Animation personnalisée */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* Effet de survol personnalisé pour les cartes de projet */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Style personnalisé pour la barre de navigation */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Animation pour le bouton de contact */
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Chess board styling */
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 300px;
+            height: 300px;
+            border: 2px solid #333;
+        }
+
+        .chess-square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .light {
+            background-color: #f0d9b5;
+        }
+
+        .dark {
+            background-color: #b58863;
+        }
+
+        /* Anime card styling */
+        .anime-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .anime-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Guitar chord styling */
+        .guitar-chord {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .guitar-chord:hover {
+            transform: scale(1.1);
+        }
+
+        /* Schedule table styling */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .schedule-table th {
+            background-color: #3B82F6;
+            color: white;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .schedule-table tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Dark mode toggle */
+        .dark-mode {
+        background-color: #1a202c;
+        color: #f7fafc;
+    }
+
+    .dark-mode .bg-white {
+        background-color: #2d3748 !important;
+        color: #f7fafc;
+    }
+
+    .dark-mode .bg-gray-50 {
+        background-color: #2d3748 !important;
+    }
+
+    /* Text Colors */
+    .dark-mode .text-gray-800,
+    .dark-mode .text-gray-700,
+    .dark-mode .text-gray-600,
+    .dark-mode .text-gray-500 {
+        color: #e2e8f0 !important;
+    }
+
+    .dark-mode .text-blue-500 {
+        color: #63b3ed !important;
+    }
+
+    /* Form Inputs */
+    .dark-mode input,
+    .dark-mode textarea,
+    .dark-mode select {
+        background-color: #2d3748 !important;
+        border-color: #4a5568 !important;
+        color: #f7fafc !important;
+    }
+
+    .dark-mode input:focus,
+    .dark-mode textarea:focus,
+    .dark-mode select:focus {
+        border-color: #63b3ed !important;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2) !important;
+    }
+
+    .dark-mode input::placeholder,
+    .dark-mode textarea::placeholder {
+        color: #a0aec0 !important;
+    }
+
+    /* Cards and Containers */
+    .dark-mode .project-card {
+        background-color: #2d3748 !important;
+        border-color: #4a5568 !important;
+    }
+
+    .dark-mode .project-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Tables */
+    .dark-mode .schedule-table th {
+        background-color: #4a5568 !important;
+        color: #f7fafc !important;
+    }
+
+    .dark-mode .schedule-table td {
+        background-color: #2d3748 !important;
+        border-color: #4a5568 !important;
+        color: #e2e8f0 !important;
+    }
+
+    .dark-mode .schedule-table tr:nth-child(even) td {
+        background-color: #1a202c !important;
+    }
+
+    .dark-mode .schedule-table tr:hover td {
+        background-color: #4a5568 !important;
+    }
+
+    /* Buttons */
+    .dark-mode .contact-btn:not(.bg-blue-500) {
+        border-color: #63b3ed !important;
+        color: #63b3ed !important;
+    }
+
+    .dark-mode .contact-btn:hover:not(.bg-blue-500) {
+        background-color: rgba(99, 179, 237, 0.1) !important;
+    }
+
+    /* Social Icons */
+    .dark-mode .bg-blue-100 {
+        background-color: rgba(99, 179, 237, 0.1) !important;
+    }
+
+    .dark-mode .text-blue-500 {
+        color: #63b3ed !important;
+    }
+
+    /* Navigation */
+    .dark-mode nav {
+        background-color: #2d3748 !important;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .dark-mode .nav-link {
+        color: #e2e8f0 !important;
+    }
+
+    .dark-mode #mobile-menu {
+        background-color: #2d3748 !important;
+    }
+
+    .dark-mode #mobile-menu a {
+        color: #e2e8f0 !important;
+    }
+
+    .dark-mode #mobile-menu a:hover {
+        background-color: #4a5568 !important;
+    }
+
+    /* Footer */
+    .dark-mode footer {
+        background-color: #1a202c !important;
+    }
+
+    /* Modal */
+    .dark-mode #anime-modal .bg-white {
+        background-color: #2d3748 !important;
+    }
+
+    /* Chess Board */
+    .dark-mode .chess-square.light {
+        background-color: #4a5568 !important;
+    }
+
+    .dark-mode .chess-square.dark {
+        background-color: #1a202c !important;
+    }
+
+    .dark-mode .chess-selected {
+        box-shadow: inset 0 0 0 2px #63b3ed !important;
+    }
+
+    /* Badges/Tags */
+    .dark-mode .bg-blue-100 {
+        background-color: rgba(99, 179, 237, 0.2) !important;
+    }
+
+    .dark-mode .text-blue-800 {
+        color: #63b3ed !important;
+    }
+
+    /* Hero Section */
+    .dark-mode .bg-gradient-to-r {
+        background: linear-gradient(to right, #2d3748, #1a202c) !important;
+    }
+
+    /* Active navigation link styling */
+.nav-link.active,
+#mobile-menu a.active {
+    color: #3B82F6 !important;
+    font-weight: 600;
+}
+
+.nav-link.active::after,
+#mobile-menu a.active {
+    width: 100% !important;
+}
+
+/* Mobile menu active link */
+#mobile-menu a.active {
+    background-color: #EFF6FF !important;
+}
+
+/* Dark mode adjustments */
+.dark-mode .nav-link.active,
+.dark-mode #mobile-menu a.active {
+    color: #63b3ed !important;
+}
+
+.dark-mode #mobile-menu a.active {
+    background-color: rgba(99, 179, 237, 0.1) !important;
+}
+
+/* Active state for contact button in navigation */
+.contact-btn.active {
+    background-color: #1D4ED8 !important; /* Darker blue for active state */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Dark mode active state */
+.dark-mode .contact-btn.active {
+    background-color: #3B82F6 !important;
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.5) !important;
+}
+
+/* Add these to your existing style.css file */
+
+/* Form styling */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Error states */
+input.error {
+    border-color: #ef4444;
+}
+
+input.success {
+    border-color: #10b981;
+}
+
+/* Animation for form elements */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark mode styles for forms */
+.dark-mode input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+.dark-mode input:focus {
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
+}
+
+.dark-mode .bg-white {
+    background-color: #1f2937;
+}
+
+.dark-mode .text-gray-800 {
+    color: #f3f4f6;
+}
+
+.dark-mode .text-gray-700 {
+    color: #d1d5db;
+}
+
+.dark-mode .text-gray-600 {
+    color: #9ca3af;
+}
+
+.dark-mode label {
+    color: #e5e7eb;
+}
+
+/* Form validation styles */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group.success input {
+    border-color: #10b981;
+}
+
+.form-group.error input {
+    border-color: #ef4444;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 1rem;
+    top: 3.1rem;
+    pointer-events: none;
+}
+
+.validation-message {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.validation-message.success {
+    color: #10b981;
+}
+
+.validation-message.error {
+    color: #ef4444;
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 4px;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.password-strength.weak {
+    width: 33%;
+    background-color: #ef4444;
+}
+
+.password-strength.medium {
+    width: 66%;
+    background-color: #f59e0b;
+}
+
+.password-strength.strong {
+    width: 100%;
+    background-color: #10b981;
+}
+
+/* Dark mode adjustments for form validation */
+.dark-mode .form-group.success input {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.dark-mode .form-group.error input {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Form validation styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.validation-message {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.success-icon, .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+}
+
+/* Password strength indicator */
+.password-strength.weak {
+    background-color: #ef4444; /* red-500 */
+    width: 25%;
+}
+
+.password-strength.medium {
+    background-color: #f59e0b; /* amber-500 */
+    width: 50%;
+}
+
+.password-strength.strong {
+    background-color: #10b981; /* green-500 */
+    width: 100%;
+}
+
+.password-strength-text.weak {
+    color: #ef4444; /* red-500 */
+}
+
+.password-strength-text.medium {
+    color: #f59e0b; /* amber-500 */
+}
+
+.password-strength-text.strong {
+    color: #10b981; /* green-500 */
+}
+
+/* Animation for form elements */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Password strength indicator */
+        .password-strength.weak {
+            background-color: #ef4444; /* red-500 */
+            width: 25%;
+        }
+
+        .password-strength.medium {
+            background-color: #f59e0b; /* amber-500 */
+            width: 50%;
+        }
+
+        .password-strength.strong {
+            background-color: #10b981; /* green-500 */
+            width: 100%;
+        }
+
+        .password-strength-text.weak {
+            color: #ef4444; /* red-500 */
+        }
+
+        .password-strength-text.medium {
+            color: #f59e0b; /* amber-500 */
+        }
+
+        .password-strength-text.strong {
+            color: #10b981; /* green-500 */
+        }
+
+        /* Animation for form elements */
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom styles for validation */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .validation-message {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .success-icon, .error-icon, .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 0.75rem;
+            transform: translateY(-50%);
+        }
+
+        .password-toggle {
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        /* Disabled button styling */
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
