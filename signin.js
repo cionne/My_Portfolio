@@ -83,5 +83,4 @@
                 errorIcon.classList.add('hidden');
                 successIcon.classList.remove('hidden');
             }
-
         });
