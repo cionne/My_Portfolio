@@ -33,7 +33,7 @@
                 if (isEmailValid && isPasswordValid) {
                     // Form is valid, show success message
                     alert('Signed in successfully! Redirecting to home page...');
-                    window.location.href = 'my_static_page.html';
+                    window.location.href = 'index.html';
                 }
             });
             
@@ -83,4 +83,5 @@
                 errorIcon.classList.add('hidden');
                 successIcon.classList.remove('hidden');
             }
+
         });
